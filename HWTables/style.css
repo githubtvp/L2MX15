@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.header{
+    background-color:#1c1b1b;
+    color: white;
+    height:100px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.side-nav{
+    width: 260px;
+    height: 99vh;
+    background-color: rgb(28, 27, 27);
+    position: absolute;
+    top:0;
+
+}
+
+.side-nav button{
+    background: rgb(44, 43, 43);
+    color: white;
+    width: 80%;
+    height: 40px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+}
+
+.side-nav button:hover{
+    background-color:rgb(6, 117, 214);
+}
+
+.content{
+    width: 1200px;
+    height: 500px;
+    background: rgb(39, 39, 39);
+    border-radius: 20px;
+    margin: 20px auto;
+    transform: translateX(130px) ;
+}
+ 
+.but-table{
+    margin:0 auto;
+    transform: translateY(120px);
+} 
+
+hr{
+    width: 90%;
+}
+
+tr{
+    background-color: rgb(131, 175, 175);
+}
+
+tr:hover{
+    background-color: #d19364;
+    color :color(from color srgb r g b);
+}
