@@ -1,0 +1,120 @@
+#formcontainer
+{
+    float : left;
+    width : 60%;
+    padding-top: 0;
+}
+
+.fdset1 .fdset2
+{
+    margin-bottom: 1em;
+    border: solid 2px #305704;
+    background-color: beige;
+    display: block;
+}
+
+legend
+{
+    padding: 0 10px;
+}
+.fdset1 label 
+{
+    width : 105px;
+    margin-right: 20px;
+    color: black;
+    float: left;
+    text-align: right;
+}
+
+.fdset2 label
+{
+    width : 105px;
+    margin-right: 20px;
+    color: black;
+    float: left;
+    text-align: right;
+}
+
+.fdset1 input
+{
+  display: block;  
+}
+
+.fdset2 input
+{
+  display: block; 
+}
+
+.fdset1 .radioBtn 
+{
+    float: left; 
+    text-align: left;
+    display:inline-flex; 
+    margin-bottom: 0em;
+    border:none;     
+    padding: 0;
+}
+
+input.textFdSet1 
+{
+    background-color: #c8c8c4; 
+}
+  
+input.textFdSet1 :invalid {
+    border: 2px solid red;
+ }
+input.textFdSet1 :invalid + span {
+    color: red;
+    font-weight: bold;
+ }
+
+input.textFdSet2
+{
+  background-color: #c8c8c4; 
+}
+
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: rgb(188, 10, 10);
+    margin: 0; 
+    display:inline-block;
+}
+
+input[type=radio]:checked {
+    accent-color: rgb(55, 225, 165);
+ }
+
+  option {
+    padding: 0px;
+  } 
+
+  input + span {
+    position: relative;
+  }
+  
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+  }
+  
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:invalid + span::before {
+    content: "✖";
+    color: red;
+  }
+  
+  input:valid + span::before {
+    content: "✓";
+    color: green;
+  }
