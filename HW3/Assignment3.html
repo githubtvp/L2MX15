@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment 3</title>
+    <link rel="stylesheet" type="text/css" href="Assignment3.css" />
+    <!--<script type="text/javascript" src="TouristJS.js"></script>-->
+</head>
+
+<body>
+    <hgroup>
+        <h1>Apply for Driving License(India)</h1>
+    </hgroup>
+
+    <div id="formcontainer">
+        <form id="apply_license" method="post">
+            <fieldset>
+                <legend>
+                    <h3>Application form</h3>
+                </legend>
+                <fieldset class="fdset1">
+                    <legend>
+                        <h4>Individual's Information</h4>
+                    </legend>
+                    <label for="fname" >First Name : </label>
+                    <input type="text" name="fname" id="fname" class="textFdSet1" size="30" autocomplete="off" pattern="[A-Za-z]+" title="Please enter alphabets" /><br>
+                    <label for="lname">Last Name : </label>
+                    <input type="text" name="lname" id="lname" class="textFdSet1"  size="30" autocomplete="off" pattern="[A-Za-z]+" title="Please enter alphabets"/><br>
+                    <label for="aadhar1">Aadhaar No : </label>
+                    <input type="text" name="aadhar1" id="aadhar1" class="textFdSet1" size="30" autocomplete="off" pattern="[2-9][0-9]{3}[0-9]{4}[0-9]{4}$" 
+                       title ="Enter valid Aadhar no only" /><br>
+                    <label for="email">Email Address : </label>
+                    <input type="email" name="email" id="email" class="textFdSet1" size="45"
+                        placeholder="name@anywhere.com" autocomplete="off"/><br>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" min="2005-10-01" max="2052-10-31"
+                        style="background-color: #c8c8c4;" />
+                    <p >(between 18 years and 65 years only)</p>                   
+                    <br> <br>
+                    <label for="eyesight">Eye sight :</label>
+                    <input type="text" id="eyesight" name="eyesight" class="textFdSet1" pattern="[6]+\/+[1-2]{1}[0-9]{1}$" />                  
+                    <fieldset class="radioBtn">
+                        <input type="radio" name="gender" id="female" value="F" />
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="male" value="M" />
+                        <label for="male">Male</label>
+                    </fieldset>
+
+                </fieldset>
+
+                <fieldset class="fdset2">
+                    <legend>
+                        <h4>Parent's/Gaurdian Information</h4>
+                    </legend>
+                    <label for="parent">Father/Mother:</label>
+                    <select id="parent" name="parent" style="background-color: #c8c8c4;">
+                        <option value="1"> Mother </option>
+                        <option value="2"> Father </option>
+                    </select>
+                    <br><br>
+
+                    <label for="pfname">First Name : </label>
+                    <input type="text" name="pfname" id="pfname" class="textFdSet2" autocomplete="off" size="30" pattern="[A-Za-z]+" title="Please enter alphabets"/><br>
+                    <label for="plname">Last Name : </label>
+                    <input type="text" name="plname" id="plname" class="textFdSet2" autocomplete="off" size="30" pattern="[A-Za-z]+" title="Please enter alphabets"/><br>
+                    <label for="aadhar2">Aadhaar No : </label>
+                    <input type="text" name="aadhar2" id="aadhar1" class="textFdSet2" autocomplete="off" size="30" pattern="[2-9][0-9]{3}[0-9]{4}[0-9]{4}$"/><br>
+                </fieldset>
+            </fieldset>           
+        </form> 
+        <br><br>
+        <button popovertarget="submitmsg">Submit Form</button>
+        <div popover="auto" id="submitmsg">Application form sent to server!</div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
