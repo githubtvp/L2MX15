@@ -4,25 +4,18 @@ const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [3, 4, 5, 6, 7];
 let arr3 = []
 function buildNewArr(arr1, arr2) {
-    let found = false;
-    for (i = 0; i < arr1.length; i++) {
-        for (j = 0; j < arr2.length; j++) {
-            if (arr1[i] == arr2[j]) {
-                found = true;
-                break;
-            }
-        }
-        if (found == false) {
-            arr3.push(arr1[i]);
-        }
-        found = false;
-    }
+    arr1.forEach(element => {
+        if (!arr2.includes(element))
+            arr3.push(element);
+    });
 }
 
-buildNewArr(arr1, arr2);
-buildNewArr(arr2, arr1);
-console.log(arr3);
-
+function qsn5() {
+    buildNewArr(arr1, arr2);
+    buildNewArr(arr2, arr1);
+    console.log(arr3);
+}
+//qsn5();
 function qsn7() {
     let sentence = prompt("Enter a sentence : ");
     console.log("You entered : \n " + sentence);
@@ -33,11 +26,9 @@ function qsn7() {
 }
 
 //qsn7();
-function qsn8(arr, n)
-{
+function qsn8(arr, n) {
     let retArr = [];
-    for(i=0; i < arr.length; i++)
-    {
+    for (i = 0; i < arr.length; i++) {
         retArr.push(arr[i][n]);
     }
     return retArr;
@@ -46,29 +37,50 @@ function qsn8(arr, n)
 const studArr = [
     ['23MX301', 90], ['23MX302', 98], ['23MX303', 99]
 ]
-let arr = qsn8(studArr, 1);
-console.log(arr);
+// let arr = qsn8(studArr, 1);
+// console.log(arr);
 
-function retSum(arr)
-{
-    let sum = arr.reduce( (acc, val) => acc+=val, 0)
+function retSum(arr) {
+    let sum = 0;
+    if (arr.length > 1) {
+        sum = arr.reduce((acc, val) => { return (acc += val) }, 0);
+    }
+    else {
+        sum += arr;
+    }
+    //console.log("\nSum : " + sum);
     return sum;
 }
 
-function qsn9()
-{
-    let arr = [1,2,3];
+function qsn9() {
+    let sum = 0;
+    let arr = [1, [2, 3], 4, [5, 6], [7, 8, 9]]
     arr.forEach(element => {
-    } );  
+        sum += retSum(element);
+    });
+    console.log("Sum of jagged array  : " + sum);
 }
 
-isOdd(5)
+//qsn9();
+function qsn10(maxNo) {
+    let arr = [];
+    let n = Math.round(maxNo);
+    while (arr.length < n) {
+        let x = Math.random() * n + 1;
+        x = Math.round(x);
+        while (arr.includes(x) || x < 1 || x > n) {
+            x = Math.random() * n + 1;
+            x = Math.round(x);
+        }
+        arr.push(x);
+    }
+    console.log(arr);
+    return arr;
+}
+qsn10(10);
 
-is 
 
-
-console.log(retSum(arr5));
-
-exclaim() = (str) => {str + '!'};
-console.log(exclaim(exclaim('Adrian')));
+// const exclaim = (str) => {return (str + '!')};
+// console.log(exclaim('Adrian'));
+// console.log(exclaim(exclaim('Adrian')));
 
