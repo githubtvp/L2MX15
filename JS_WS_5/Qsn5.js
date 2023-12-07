@@ -37,8 +37,8 @@ function qsn8(arr, n) {
 const studArr = [
     ['23MX301', 90], ['23MX302', 98], ['23MX303', 99]
 ]
-// let arr = qsn8(studArr, 1);
-// console.log(arr);
+let arr = qsn8(studArr, 1);
+console.log(arr);
 
 function retSum(arr) {
     let sum = 0;
